@@ -6,11 +6,11 @@ import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 
-@Parcelize
+
 @Entity
 data class Task(
-    @PrimaryKey(autoGenerate = false)
+    @PrimaryKey(autoGenerate = true)
     var id: Int?,
     var title: String?,
     var desc: String,
-) : Parcelable
+)
