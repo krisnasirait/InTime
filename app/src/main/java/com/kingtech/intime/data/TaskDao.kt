@@ -1,25 +1,23 @@
 package com.kingtech.intime.data
 
-import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
+
+import androidx.room.*
+import androidx.room.OnConflictStrategy.Companion.REPLACE
 
 
 @Dao
 interface TaskDao {
 
-    @Insert
-    suspend fun insertTask(task: Task): Long
+    @Query("SELECT * FROM Task")
+    fun getAllTask(): List<Task>
 
-    @Query("SELECT * FROM Task WHERE isFinished == 0")
-    fun getTask(): LiveData<List<Task>>
+    @Insert(onConflict = REPLACE)
+    fun insertTask(task: Task): Long
 
-    @Query("UPDATE Task SET isFinished = 1 where id=:uid")
-    fun finishTask(uid: Long)
+    @Update
+    fun updateTask(task: Task): Int
 
-    @Query("DELETE FROM Task WHERE id=:uid")
-    fun deleteTask(uid: Long)
-
+    @Delete
+    fun deleteTask(task: Task): Int
 
 }
