@@ -10,7 +10,7 @@ import kotlinx.android.parcel.Parcelize
 @Entity
 data class Task(
     @PrimaryKey(autoGenerate = true)
-    var id: Int?,
+    var id: Long?,
     var title: String?,
     var desc: String,
 )
