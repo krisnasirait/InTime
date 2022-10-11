@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">InTime</string>
+    <string name="landing_title">Never Missed a Task Anymore</string>
+    <string name="letsgo_btn">Let\'s Go</string>
+    <string name="landing_desc">We will make sure that you will effectively manage every task you have, and not miss any of them</string>
 </resources>
