@@ -2,7 +2,7 @@ package com.kingtech.intime.data
 
 
 import androidx.room.*
-import androidx.room.OnConflictStrategy.Companion.REPLACE
+import androidx.room.OnConflictStrategy.REPLACE
 
 
 @Dao

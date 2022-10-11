@@ -13,7 +13,6 @@ import androidx.room.RoomDatabase
 abstract class TaskDatabase : RoomDatabase() {
 
     abstract fun taskDao(): TaskDao
-
     companion object {
 
         private var INSTANCE: TaskDatabase? = null
@@ -27,9 +26,9 @@ abstract class TaskDatabase : RoomDatabase() {
             }
             return INSTANCE
         }
+
         fun destroyInstance() {
             INSTANCE = null
         }
-
     }
 }
