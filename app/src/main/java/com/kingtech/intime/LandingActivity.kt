@@ -20,7 +20,7 @@ class LandingActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLetsGo.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, HomeActivity::class.java))
         }
     }
 }
