@@ -6,10 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kingtech.intime.R
 import com.kingtech.intime.data.Task
-import com.kingtech.intime.databinding.ItemContainerTaskBinding
 import kotlinx.android.synthetic.main.item_container_task.view.*
 
-class TaskAdapter(val listTask: List<Task>) : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
+class TaskAdapter(private val listTask: List<Task>) : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -28,6 +27,5 @@ class TaskAdapter(val listTask: List<Task>) : RecyclerView.Adapter<TaskAdapter.V
     override fun getItemCount(): Int {
         return listTask.size
     }
-
 
 }
