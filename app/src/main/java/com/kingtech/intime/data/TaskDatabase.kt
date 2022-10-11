@@ -15,23 +15,21 @@ abstract class TaskDatabase : RoomDatabase() {
     abstract fun taskDao(): TaskDao
 
     companion object {
-        @Volatile
+
         private var INSTANCE: TaskDatabase? = null
 
-        fun getDatabase(context: Context): TaskDatabase {
-            val tempInstance = INSTANCE
-            if(tempInstance != null) {
-                return tempInstance
+        fun getInstance(context: Context): TaskDatabase? {
+            if(INSTANCE == null) {
+                synchronized(TaskDatabase::class) {
+                    INSTANCE = Room.databaseBuilder(context.applicationContext,
+                    TaskDatabase::class.java, "Task.db").build()
+                }
             }
-            synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    TaskDatabase::class.java,
-                    "task.db"
-                ).build()
-                INSTANCE = instance
-                return instance
-            }
+            return INSTANCE
         }
+        fun destroyInstance() {
+            INSTANCE = null
+        }
+
     }
 }
