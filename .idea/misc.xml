@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project/Kotlin/InTime/app/src/main/res/layout/activity_add.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/Kotlin/InTime/app/src/main/res/layout/activity_home.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/Kotlin/InTime/app/src/main/res/layout/activity_landing.xml" value="0.2318840579710145" />
         <entry key="..\:/Project/Kotlin/InTime/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
+        <entry key="..\:/Project/Kotlin/InTime/app/src/main/res/layout/content_add.xml" value="0.36666666666666664" />
+        <entry key="..\:/Project/Kotlin/InTime/app/src/main/res/layout/custom_add_task_dialog.xml" value="0.36277173913043476" />
         <entry key="..\:/Project/Kotlin/InTime/app/src/main/res/layout/item_container_task.xml" value="0.365625" />
       </map>
     </option>
